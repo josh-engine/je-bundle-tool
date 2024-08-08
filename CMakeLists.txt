@@ -3,4 +3,6 @@ project(JEAssetBundle)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(JEAssetBundle src/main.cpp)
+add_executable(JEAssetBundle src/main.cpp
+        src/bundle.cpp
+        src/bundle.h)
