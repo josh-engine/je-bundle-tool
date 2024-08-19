@@ -53,11 +53,11 @@ void createBundle(std::vector<std::string> names) {
     }
     std::cout << "Bundle successfully built." << std::endl;
 
-    std::cout << "Bundle file name? > ";
+    std::cout << "Bundle file name? (.jbd will be appended) > ";
     std::string finalFilename;
     std::cin >> finalFilename;
 
-    std::ofstream finalFile(finalFilename, std::ios::binary);
+    std::ofstream finalFile(finalFilename + ".jbd", std::ios::binary);
     finalFile.write(reinterpret_cast<const char *>(&finalArray[0]), sizeof(file_header) + names.size() * sizeof(bundled_file_info) + file_len_counter);
     finalFile.close();
 }

@@ -5,6 +5,8 @@
 #ifndef JEASSETBUNDLE_BUNDLE_H
 #define JEASSETBUNDLE_BUNDLE_H
 
+#define BLAHAJ_NUMBER 0x0B1A11A7
+
 #include <string>
 #include <vector>
 
@@ -15,7 +17,7 @@ struct bundled_file_info {
 } typedef bundled_file_info;
 
 struct file_header {
-    unsigned int magicNum = 0x0B1A11A7;
+    unsigned int magicNum = BLAHAJ_NUMBER; // Blahaj magic number, static
     unsigned int fileCount = 0;
 } typedef file_header;
 
